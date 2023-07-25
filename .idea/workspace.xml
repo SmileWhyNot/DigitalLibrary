@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DigitalLibrary:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/editBook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/newBook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/MySpringMvcDispatcherSerlvetIntitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/MySpringMvcDispatcherSerlvetIntitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties.origin" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties.origin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +29,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,6 +61,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -57,6 +71,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "987a1da05e769a299be3f7c0207c5f4f",
     "vue.rearranger.settings.migration": "true"
   },
@@ -164,11 +179,49 @@
       <option name="presentableId" value="Default" />
       <updated>1690123431345</updated>
       <workItem from="1690123432866" duration="1052000" />
-      <workItem from="1690207314286" duration="4578000" />
+      <workItem from="1690207314286" duration="15892000" />
+      <workItem from="1690278119947" duration="16742000" />
+      <workItem from="1690296953272" duration="188000" />
     </task>
+    <task id="LOCAL-00001" summary="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom">
+      <created>1690215659399</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690215659399</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add filter for patch delete requests">
+      <created>1690216274256</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690216274256</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add presenter layouts, add person validator for fullName, add create request">
+      <created>1690281375324</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690281375324</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists">
+      <created>1690288247615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690288247615</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom" />
+    <MESSAGE value="add filter for patch delete requests" />
+    <MESSAGE value="add presenter layouts, add person validator for fullName, add create request" />
+    <MESSAGE value="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists" />
   </component>
 </project>

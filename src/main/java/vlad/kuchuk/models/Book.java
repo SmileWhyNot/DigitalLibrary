@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class Book {
-    private int id;
+    private int bookId;
     @NotNull
     @Size(min = 2, max = 100, message = "The name must be between 2 and 100 characters")
     private String name;
@@ -14,19 +14,21 @@ public class Book {
     @NotNull
     private int year;
 
-    public Book(int id, String name, String auther, int year) {
-        this.id = id;
+    public Book(int bookId, String name, String auther, int year) {
+        this.bookId = bookId;
         this.name = name;
         this.auther = auther;
         this.year = year;
     }
 
-    public int getId() {
-        return id;
+    public Book() {}
+
+    public int getBookId() {
+        return bookId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
     }
 
     public String getName() {
