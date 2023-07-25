@@ -10,6 +10,8 @@ import vlad.kuchuk.dao.PersonDAO;
 import vlad.kuchuk.models.Person;
 import vlad.kuchuk.utils.PersonValidator;
 
+import java.util.Objects;
+
 @Controller
 @RequestMapping("/people")
 public class PeopleController {
@@ -58,14 +60,23 @@ public class PeopleController {
         return "people/editPerson";
     }
 
-    @PostMapping("/{id}")
+    @PatchMapping("/{id}")
     public String update(@PathVariable("id") int id,
                          @ModelAttribute("person") @Valid Person person,
                          BindingResult bindingResult) {
+        if(!Objects.equals(personDAO.show(id).getFullName(), person.getFullName())) {
+            personValidator.validate(person, bindingResult);
+        }
         if (bindingResult.hasErrors())
             return "/people/editPerson";
 
         personDAO.update(id, person);
+        return "redirect:/people";
+    }
+
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") int id) {
+        personDAO.delete(id);
         return "redirect:/people";
     }
 }

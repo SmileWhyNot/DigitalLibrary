@@ -7,7 +7,6 @@ public class Person {
     private int personId;
     @NotNull
     @Size(min = 2, max = 100, message = "The name must be between 2 and 100 characters")
-    // TODO: Unique in Spring Validator
     private String fullName;
     @NotNull
     private int yearOfBirth;
