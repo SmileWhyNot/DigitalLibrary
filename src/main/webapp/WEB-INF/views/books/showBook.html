@@ -11,7 +11,10 @@
 <a>Tyt bydet chtoto</a>
 <br/>
 <hr/>
-<a th:href="@{/books/{id}/editBook(id=${book.getBookId()})}">Edit book</a>
+<form th:method="GET" th:action="@{/books/{id}/editBook(id=${book.getBookId()})}">
+    <input type="submit" value="Edit book">
+</form>
+<br/>
 <form th:method="DELETE" th:action="@{/books/{id}(id=${book.getBookId()})}">
     <input type="submit" value="Delete Book">
 </form>

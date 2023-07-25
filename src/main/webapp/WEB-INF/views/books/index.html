@@ -12,6 +12,8 @@
 
   <br/>
   <hr/>
-  <a href="/books/newBook">Add new book</a>
+<form th:method="GET" th:action="@{/books/newBook}">
+    <input type="submit" value="Add new book">
+</form>
 </body>
 </html>

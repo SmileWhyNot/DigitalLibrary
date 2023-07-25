@@ -9,16 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/editBook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/newBook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" afterDir="false" />
+    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Update book functionality, add all requests for Book CRUD, add htmls for book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +177,7 @@
       <workItem from="1690123432866" duration="1052000" />
       <workItem from="1690207314286" duration="15892000" />
       <workItem from="1690278119947" duration="16742000" />
-      <workItem from="1690296953272" duration="188000" />
+      <workItem from="1690296953272" duration="983000" />
     </task>
     <task id="LOCAL-00001" summary="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom">
       <created>1690215659399</created>
@@ -211,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690288247615</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update book functionality, add all requests for Book CRUD, add htmls for book">
+      <created>1690297470366</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690297470366</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +225,7 @@
     <MESSAGE value="add filter for patch delete requests" />
     <MESSAGE value="add presenter layouts, add person validator for fullName, add create request" />
     <MESSAGE value="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add delete request, update PersonValidator: fix bug when updating person his name wasn't applied to leave because it exists" />
+    <MESSAGE value="Update book functionality, add all requests for Book CRUD, add htmls for book" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update book functionality, add all requests for Book CRUD, add htmls for book" />
   </component>
 </project>
