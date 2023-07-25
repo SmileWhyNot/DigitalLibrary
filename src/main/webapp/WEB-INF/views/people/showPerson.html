@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${person.getFullName()}">Name</title>
+</head>
+<body>
+<p th:text="${person.getFullName() + ', ' + person.getYearOfBirth()}"></p>
+<br/>
+<hr/>
+<a>Tyt bydet chtoto</a>
+<br/>
+<hr/>
+<a th:href="@{/people/{id}/editPerson(id=${person.getPersonId()})}">Edit person</a>
+</body>
+</html>

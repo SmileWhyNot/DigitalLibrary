@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class Person {
-    private int id;
+    private int personId;
     @NotNull
     @Size(min = 2, max = 100, message = "The name must be between 2 and 100 characters")
     // TODO: Unique in Spring Validator
@@ -12,18 +12,20 @@ public class Person {
     @NotNull
     private int yearOfBirth;
 
-    public Person(int id, String fullName, int yearOfBirth) {
-        this.id = id;
+    public Person(int personId, String fullName, int yearOfBirth) {
+        this.personId = personId;
         this.fullName = fullName;
         this.yearOfBirth = yearOfBirth;
     }
 
-    public int getId() {
-        return id;
+    public Person() {}
+
+    public int getPersonId() {
+        return personId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPersonId(int personId) {
+        this.personId = personId;
     }
 
     public String getFullName() {
