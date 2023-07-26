@@ -56,7 +56,7 @@ public class PeopleController {
     }
 
     @GetMapping("/{id}/editPerson")
-    public String editPerson(@PathVariable("id") int id, Model model){
+    public String editPerson(@PathVariable("id") int id, Model model) {
         model.addAttribute("person", personDAO.show(id));
         return "people/editPerson";
     }
@@ -65,7 +65,7 @@ public class PeopleController {
     public String update(@PathVariable("id") int id,
                          @ModelAttribute("person") @Valid Person person,
                          BindingResult bindingResult) {
-        if(!Objects.equals(personDAO.show(id).getFullName(), person.getFullName())) {
+        if (!Objects.equals(personDAO.show(id).getFullName(), person.getFullName())) {
             personValidator.validate(person, bindingResult);
         }
         if (bindingResult.hasErrors())

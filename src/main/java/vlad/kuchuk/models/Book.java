@@ -24,7 +24,8 @@ public class Book {
         this.personId = personId;
     }
 
-    public Book() {}
+    public Book() {
+    }
 
     public int getBookId() {
         return bookId;

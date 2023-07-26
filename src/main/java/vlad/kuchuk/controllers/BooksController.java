@@ -30,9 +30,9 @@ public class BooksController {
     }
 
     @GetMapping("/{id}")
-    public String showBook(@PathVariable("id") int id
-                            , Model model
-                            , @ModelAttribute("person")Person person) {
+    public String showBook(@PathVariable("id") int id,
+                           Model model,
+                           @ModelAttribute("person") Person person) {
         model.addAttribute("book", bookDAO.show(id));
         model.addAttribute("bookReader", bookDAO.getReader(id));
         model.addAttribute("people", personDAO.index());
@@ -44,7 +44,7 @@ public class BooksController {
                                @ModelAttribute("book") Book book,
                                @ModelAttribute("person") Person person) {
         book = bookDAO.show(id);
-        if(book.getPersonId() != null) {
+        if (book.getPersonId() != null) {
             bookDAO.removeBookReader(id);
         } else if (book.getPersonId() == null) {
             book.setPersonId(person.getPersonId());
