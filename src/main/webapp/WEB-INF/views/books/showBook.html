@@ -6,25 +6,30 @@
 </head>
 <body>
 <p th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></p>
-<br/>
-<hr/>
+
 <div th:if="${bookReader != null}">
+    <hr/>
     Book reader is: <i th:text="${bookReader.fullName + ', ' + bookReader.yearOfBirth} "></i>
     <form th:method="PATCH" th:action="@{/books/{id}/updateReader(id=${book.getBookId()})}">
         <input type="submit" value="Remove reader">
     </form>
+    <hr/>
 </div>
-    <form th:if="${bookReader == null}" th:method="PATCH" th:action="@{/books/{id}/updateReader(id=${book.getBookId()})}">
-        This book has no reader. Whom to assign it? <br/>
-        Choose the person
-        <select th:object="${person}" th:field="*{personId}">
-            <option th:each="person : ${people}" th:value="${person.getPersonId()}" th:text="${person.fullName + ', ' + person.yearOfBirth}"></option>
+<div th:if="${bookReader == null}">
+    <hr/>
+    <span>This book has no reader. Whom to assign it?</span>
+    <form th:method="PATCH" th:action="@{/books/{id}/updateReader(id=${book.getBookId()})}">
+        <label for="person">Choose the person</label>
+        <select th:object="${person}" th:field="*{personId}" id="person">
+            <option th:each="person : ${people}" th:value="${person.getPersonId()}"
+                    th:text="${person.fullName + ', ' + person.yearOfBirth}">
+            </option>
         </select>
         <input type="submit" value="Set reader">
     </form>
+    <hr/>
+</div>
 
-<br/>
-<hr/>
 <form th:method="GET" th:action="@{/books/{id}/editBook(id=${book.getBookId()})}">
     <input type="submit" value="Edit book">
 </form>
