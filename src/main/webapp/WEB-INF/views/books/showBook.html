@@ -14,6 +14,14 @@
         <input type="submit" value="Remove reader">
     </form>
 </div>
+    <form th:if="${bookReader == null}" th:method="PATCH" th:action="@{/books/{id}/updateReader(id=${book.getBookId()})}">
+        This book has no reader. Whom to assign it? <br/>
+        Choose the person
+        <select th:object="${person}" th:field="*{personId}">
+            <option th:each="person : ${people}" th:value="${person.getPersonId()}" th:text="${person.fullName + ', ' + person.yearOfBirth}"></option>
+        </select>
+        <input type="submit" value="Set reader">
+    </form>
 
 <br/>
 <hr/>

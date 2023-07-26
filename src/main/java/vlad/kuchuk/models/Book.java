@@ -16,11 +16,12 @@ public class Book {
 
     private Integer personId;
 
-    public Book(int bookId, String name, String auther, int year) {
+    public Book(int bookId, String name, String auther, int year, int personId) {
         this.bookId = bookId;
         this.name = name;
         this.auther = auther;
         this.year = year;
+        this.personId = personId;
     }
 
     public Book() {}

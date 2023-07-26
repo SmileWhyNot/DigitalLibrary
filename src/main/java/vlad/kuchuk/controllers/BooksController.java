@@ -7,16 +7,20 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import vlad.kuchuk.dao.BookDAO;
+import vlad.kuchuk.dao.PersonDAO;
 import vlad.kuchuk.models.Book;
+import vlad.kuchuk.models.Person;
 
 @Controller
 @RequestMapping("/books")
 public class BooksController {
     private final BookDAO bookDAO;
+    private final PersonDAO personDAO;
 
     @Autowired
-    public BooksController(BookDAO bookDAO) {
+    public BooksController(BookDAO bookDAO, PersonDAO personDAO) {
         this.bookDAO = bookDAO;
+        this.personDAO = personDAO;
     }
 
     @GetMapping()
@@ -26,18 +30,25 @@ public class BooksController {
     }
 
     @GetMapping("/{id}")
-    public String showBook(@PathVariable("id") int id, Model model) {
+    public String showBook(@PathVariable("id") int id
+                            , Model model
+                            , @ModelAttribute("person")Person person) {
         model.addAttribute("book", bookDAO.show(id));
         model.addAttribute("bookReader", bookDAO.getReader(id));
-
+        model.addAttribute("people", personDAO.index());
         return "books/showBook";
     }
 
     @PatchMapping("/{id}/updateReader")
     public String updateReader(@PathVariable("id") int id,
-                               @ModelAttribute("book") Book book) {
+                               @ModelAttribute("book") Book book,
+                               @ModelAttribute("person") Person person) {
+        book = bookDAO.show(id);
         if(book.getPersonId() != null) {
             bookDAO.removeBookReader(id);
+        } else if (book.getPersonId() == null) {
+            book.setPersonId(person.getPersonId());
+            bookDAO.setBookReader(id, book);
         }
         return "redirect:/books";
     }

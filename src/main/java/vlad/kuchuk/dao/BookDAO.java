@@ -52,4 +52,8 @@ public class BookDAO {
     public void removeBookReader(int id) {
         jdbcTemplate.update("UPDATE book SET person_id=? WHERE book_id=?", null, id);
     }
+
+    public void setBookReader(int id, Book book) {
+        jdbcTemplate.update("UPDATE book SET person_id=? WHERE book_id=?", book.getPersonId(), id);
+    }
 }
