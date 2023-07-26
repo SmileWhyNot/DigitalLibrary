@@ -34,8 +34,11 @@ public class BooksController {
     }
 
     @PatchMapping("/{id}/updateReader")
-    public String updateReader(@PathVariable("id") int id) {
-        bookDAO.removeBookReader(id);
+    public String updateReader(@PathVariable("id") int id,
+                               @ModelAttribute("book") Book book) {
+        if(book.getPersonId() != null) {
+            bookDAO.removeBookReader(id);
+        }
         return "redirect:/books";
     }
 

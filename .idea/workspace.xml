@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Book reader is shown">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Remove reader button works correctly">
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +177,7 @@
       <workItem from="1690296953272" duration="2364000" />
       <workItem from="1690309263253" duration="5303000" />
       <workItem from="1690321487745" duration="2406000" />
-      <workItem from="1690358984380" duration="4166000" />
+      <workItem from="1690358984380" duration="4498000" />
     </task>
     <task id="LOCAL-00001" summary="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom">
       <created>1690215659399</created>
@@ -238,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690322620315</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove reader button works correctly">
+      <created>1690363248531</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690363248531</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +268,8 @@
     <MESSAGE value="Changed links to buttons on layouts" />
     <MESSAGE value="Add books showing in people/id reference. If person has no books, related text is shown" />
     <MESSAGE value="Book reader is shown" />
-    <option name="LAST_COMMIT_MESSAGE" value="Book reader is shown" />
+    <MESSAGE value="Remove reader button works correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove reader button works correctly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

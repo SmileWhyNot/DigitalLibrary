@@ -11,8 +11,8 @@
 <div th:object="${books}" th:if="${books.isEmpty()}">
     <p>This person didn't take any books</p>
 </div>
+<b th:if="${not books.isEmpty()}">Books:</b>
 <div th:each="book : ${books}" th:if="${not books.isEmpty()}" >
-    <b>Books:</b>
     <p th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></p>
 </div>
 <br/>

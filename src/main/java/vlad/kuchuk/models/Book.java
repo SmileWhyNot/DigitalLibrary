@@ -57,7 +57,7 @@ public class Book {
         this.year = year;
     }
 
-    public int getPersonId() {
+    public Integer getPersonId() {
         return personId;
     }
 
