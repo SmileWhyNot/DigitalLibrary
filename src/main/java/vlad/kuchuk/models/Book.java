@@ -16,14 +16,11 @@ public class Book {
     @Min(value = 1500, message = "Year must be higher than 1500")
     private int year;
 
-    private Integer personId;
-
-    public Book(int bookId, String name, String auther, int year, int personId) {
+    public Book(int bookId, String name, String auther, int year) {
         this.bookId = bookId;
         this.name = name;
         this.auther = auther;
         this.year = year;
-        this.personId = personId;
     }
 
     public Book() {
@@ -59,13 +56,5 @@ public class Book {
 
     public void setYear(int year) {
         this.year = year;
-    }
-
-    public Integer getPersonId() {
-        return personId;
-    }
-
-    public void setPersonId(Integer personId) {
-        this.personId = personId;
     }
 }

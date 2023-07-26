@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Add russian language support">
+    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Update models checks for min value">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +179,7 @@
       <workItem from="1690296953272" duration="2364000" />
       <workItem from="1690309263253" duration="5303000" />
       <workItem from="1690321487745" duration="2406000" />
-      <workItem from="1690358984380" duration="12981000" />
+      <workItem from="1690358984380" duration="14416000" />
     </task>
     <task id="LOCAL-00001" summary="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom">
       <created>1690215659399</created>
@@ -271,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690378897866</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update models checks for min value">
+      <created>1690379837261</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690379837261</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,19 +310,20 @@
     <MESSAGE value="Applying book to reader works correct.&#10;All functionality works.&#10;Need to clean" />
     <MESSAGE value="Remove unused imports" />
     <MESSAGE value="Add russian language support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add russian language support" />
+    <MESSAGE value="Update models checks for min value" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update models checks for min value" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java</url>
-          <line>46</line>
+          <line>44</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java</url>
-          <line>48</line>
+          <line>46</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

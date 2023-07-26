@@ -41,16 +41,13 @@ public class BooksController {
 
     @PatchMapping("/{id}/updateReader")
     public String updateReader(@PathVariable("id") int id,
-                               @ModelAttribute("book") Book book,
                                @ModelAttribute("person") Person person) {
-        book = bookDAO.show(id);
-        if (book.getPersonId() != null) {
+        if (bookDAO.getReader(id) != null) {
             bookDAO.removeBookReader(id);
-        } else if (book.getPersonId() == null) {
-            book.setPersonId(person.getPersonId());
-            bookDAO.setBookReader(id, book);
+        } else if (bookDAO.getReader(id) == null) {
+            bookDAO.setBookReader(id, person);
         }
-        return "redirect:/books";
+        return "redirect:/books/{id}";
     }
 
     @GetMapping("/newBook")
@@ -61,8 +58,6 @@ public class BooksController {
     @PostMapping
     public String createBook(@ModelAttribute("book") @Valid Book book,
                              BindingResult bindingResult) {
-
-        book.setPersonId(null);
 
         if (bindingResult.hasErrors())
             return "/books/newBook";
