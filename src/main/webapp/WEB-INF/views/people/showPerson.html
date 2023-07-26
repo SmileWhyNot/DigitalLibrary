@@ -6,17 +6,21 @@
 </head>
 <body>
 <p th:text="${person.getFullName() + ', ' + person.getYearOfBirth()}"></p>
-<br/>
-<hr/>
 <div th:object="${books}" th:if="${books.isEmpty()}">
+    <hr/>
     <p>This person didn't take any books</p>
+    <hr/>
 </div>
-<b th:if="${not books.isEmpty()}">Books:</b>
-<div th:each="book : ${books}" th:if="${not books.isEmpty()}" >
-    <p th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></p>
+
+<div th:if="${!books.isEmpty()}">
+    <hr/>
+    <b >Books:</b> <br/>
+    <table th:each="book : ${books}" th:if="${not books.isEmpty()}" >
+        <tr th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></tr>
+    </table>
+    <hr/>
 </div>
-<br/>
-<hr/>
+
 <form th:method="GET" th:action="@{/people/{id}/editPerson(id=${person.getPersonId()})}">
     <input type="submit" value="Edit person">
 </form>
