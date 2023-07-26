@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Add books showing in people/id reference. If person has no books, related text is shown">
+    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Book reader is shown">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/dao/BookDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +179,8 @@
       <workItem from="1690278119947" duration="16742000" />
       <workItem from="1690296953272" duration="2364000" />
       <workItem from="1690309263253" duration="5303000" />
-      <workItem from="1690321487745" duration="830000" />
+      <workItem from="1690321487745" duration="2406000" />
+      <workItem from="1690358984380" duration="4166000" />
     </task>
     <task id="LOCAL-00001" summary="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom">
       <created>1690215659399</created>
@@ -229,11 +231,29 @@
       <option name="project" value="LOCAL" />
       <updated>1690319103648</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Book reader is shown">
+      <created>1690322620315</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690322620315</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom" />
@@ -243,7 +263,8 @@
     <MESSAGE value="Update book functionality, add all requests for Book CRUD, add htmls for book" />
     <MESSAGE value="Changed links to buttons on layouts" />
     <MESSAGE value="Add books showing in people/id reference. If person has no books, related text is shown" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add books showing in people/id reference. If person has no books, related text is shown" />
+    <MESSAGE value="Book reader is shown" />
+    <option name="LAST_COMMIT_MESSAGE" value="Book reader is shown" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

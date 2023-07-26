@@ -48,4 +48,8 @@ public class BookDAO {
         return jdbcTemplate.query("SELECT person.full_name, person.year_of_birth FROM person INNER JOIN book on person.person_id = book.person_id WHERE book.book_id=?",
                 new Object[]{id}, new BeanPropertyRowMapper<>(Person.class)).stream().findAny().orElse(null);
     }
+
+    public void removeBookReader(int id) {
+        jdbcTemplate.update("UPDATE book SET person_id=? WHERE book_id=?", null, id);
+    }
 }

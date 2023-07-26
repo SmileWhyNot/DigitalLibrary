@@ -14,6 +14,8 @@ public class Book {
     @NotNull
     private int year;
 
+    private Integer personId;
+
     public Book(int bookId, String name, String auther, int year) {
         this.bookId = bookId;
         this.name = name;
@@ -53,5 +55,13 @@ public class Book {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public int getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Integer personId) {
+        this.personId = personId;
     }
 }

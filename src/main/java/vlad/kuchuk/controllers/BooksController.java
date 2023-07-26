@@ -33,6 +33,12 @@ public class BooksController {
         return "books/showBook";
     }
 
+    @PatchMapping("/{id}/updateReader")
+    public String updateReader(@PathVariable("id") int id) {
+        bookDAO.removeBookReader(id);
+        return "redirect:/books";
+    }
+
     @GetMapping("/newBook")
     public String newBook(@ModelAttribute("book") Book book) {
         return "books/newBook";
@@ -41,6 +47,8 @@ public class BooksController {
     @PostMapping
     public String createBook(@ModelAttribute("book") @Valid Book book,
                              BindingResult bindingResult) {
+
+        book.setPersonId(null);
 
         if (bindingResult.hasErrors())
             return "/books/newBook";

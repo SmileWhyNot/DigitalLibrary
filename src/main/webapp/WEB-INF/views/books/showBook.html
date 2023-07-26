@@ -8,9 +8,13 @@
 <p th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></p>
 <br/>
 <hr/>
-<p th:if="${bookReader != null}">
+<div th:if="${bookReader != null}">
     Book reader is: <i th:text="${bookReader.fullName + ', ' + bookReader.yearOfBirth} "></i>
-</p>
+    <form th:method="PATCH" th:action="@{/books/{id}/updateReader(id=${book.getBookId()})}">
+        <input type="submit" value="Remove reader">
+    </form>
+</div>
+
 <br/>
 <hr/>
 <form th:method="GET" th:action="@{/books/{id}/editBook(id=${book.getBookId()})}">
