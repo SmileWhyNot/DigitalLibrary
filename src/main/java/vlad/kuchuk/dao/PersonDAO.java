@@ -49,8 +49,8 @@ public class PersonDAO {
         jdbcTemplate.update("DELETE FROM Person WHERE person_id=?", id);
     }
 
-    public List<Book> books(int id) {
-        return jdbcTemplate.query("SELECT book.name, book.auther, book.year FROM book INNER JOIN person on person.person_id = book.person_id WHERE person.person_id=?"
+    public List<Book> getPersonBooks(int id) {
+        return jdbcTemplate.query("SELECT book.name, book.auther, book.year FROM book WHERE book.person_id=?"
                 , new Object[]{id}, new BeanPropertyRowMapper<>(Book.class));
     }
 }
