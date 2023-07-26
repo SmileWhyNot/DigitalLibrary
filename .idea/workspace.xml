@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Applying book to reader works correct.&#10;All functionality works.&#10;Need to clean">
+    <list default="true" id="3baf5754-b172-42e8-aeed-0954e3bbceb9" name="Changes" comment="Remove unused imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/controllers/BooksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/MySpringMvcDispatcherSerlvetIntitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/MySpringMvcDispatcherSerlvetIntitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vlad/kuchuk/config/SpringConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +178,7 @@
       <workItem from="1690296953272" duration="2364000" />
       <workItem from="1690309263253" duration="5303000" />
       <workItem from="1690321487745" duration="2406000" />
-      <workItem from="1690358984380" duration="11166000" />
+      <workItem from="1690358984380" duration="11903000" />
     </task>
     <task id="LOCAL-00001" summary="Add project structure: 2 models, config file, DispatcherServlet file, update dependencies in pom">
       <created>1690215659399</created>
@@ -256,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690375665353</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Remove unused imports">
+      <created>1690378197311</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690378197311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +293,8 @@
     <MESSAGE value="Remove reader button works correctly" />
     <MESSAGE value="Fix bug with showing &lt;p&gt;Books: &lt;/p&gt; after each book&#10;Add condition in BooksController for updating BookReader" />
     <MESSAGE value="Applying book to reader works correct.&#10;All functionality works.&#10;Need to clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Applying book to reader works correct.&#10;All functionality works.&#10;Need to clean" />
+    <MESSAGE value="Remove unused imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
