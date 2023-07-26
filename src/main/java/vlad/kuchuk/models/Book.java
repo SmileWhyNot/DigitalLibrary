@@ -1,5 +1,6 @@
 package vlad.kuchuk.models;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -12,6 +13,7 @@ public class Book {
     @Size(min = 2, max = 100, message = "The author must be between 2 and 100 characters")
     private String auther;
     @NotNull
+    @Min(value = 1500, message = "Year must be higher than 1500")
     private int year;
 
     private Integer personId;
