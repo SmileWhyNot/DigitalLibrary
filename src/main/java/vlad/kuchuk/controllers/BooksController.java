@@ -84,10 +84,7 @@ public class BooksController {
     @PostMapping("/search")
     public String searchBook(@RequestParam(value = "searchStr", required = false) String searchStr,
                                Model model) {
-        model.addAttribute("searchStr", searchStr);
-
-        Book book = booksService.findBookStartingWith(searchStr);
-        model.addAttribute("foundBook", book);
+        model.addAttribute("foundBook", booksService.findBookStartingWith(searchStr));
 
         return "/books/search";
     }

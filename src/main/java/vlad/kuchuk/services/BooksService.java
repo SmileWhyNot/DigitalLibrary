@@ -90,7 +90,9 @@ public class BooksService {
 
     @Transactional
     public void update(Book updatedBook, int id) {
+        Book book = booksRepository.findById(id).get();
         updatedBook.setBookId(id);
+        updatedBook.setReader(book.getReader());
         booksRepository.save(updatedBook);
     }
 

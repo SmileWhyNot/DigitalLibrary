@@ -47,16 +47,10 @@ public class Book {
     public Book() {
     }
 
-    public boolean countIfOverdue () {
+    public void countIfOverdue () {
         Date currentTime = new Date();
         long timeDifferenceInMillis = currentTime.getTime() - dateOfTaking.getTime();
-        if (timeDifferenceInMillis < 864_000_000) {
-            isOverdue = false;
-            return false;
-        } else {
-            isOverdue = true;
-            return true;
-        }
+        isOverdue = timeDifferenceInMillis >= 864_000_000;
     }
 
     public int getBookId() {
