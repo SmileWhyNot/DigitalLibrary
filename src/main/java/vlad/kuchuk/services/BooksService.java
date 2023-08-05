@@ -1,6 +1,8 @@
 package vlad.kuchuk.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import vlad.kuchuk.models.Book;
@@ -20,8 +22,20 @@ public class BooksService {
         this.booksRepository = booksRepository;
     }
 
-    public List<Book> findAll() {
-        return booksRepository.findAll();
+    public List<Book> findAll(Boolean sortByYear) {
+        if(sortByYear == null || !sortByYear) {
+            return booksRepository.findAll();
+        } else {
+            return booksRepository.findAll(Sort.by("year"));
+        }
+    }
+
+    public List<Book> findAllPageable(int page, int booksPerPage, Boolean sortByYear) {
+        if( sortByYear == null || !sortByYear){
+            return booksRepository.findAll(PageRequest.of(page, booksPerPage)).getContent();
+        } else {
+            return booksRepository.findAll(PageRequest.of(page, booksPerPage, Sort.by("year"))).getContent();
+        }
     }
 
     public Book findOne(int id) {
