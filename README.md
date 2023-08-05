@@ -184,12 +184,3 @@ In release v2.0.0, significant updates and improvements were made to the Library
 With these updates, the application's database interaction and performance have been enhanced, and new features have been added to improve the user experience and efficiency of managing the library's collection.
 
 Enjoy using the enhanced Library Management System!
-
-
-
-
-#### PeopleController
-
-
-
-With these request mappings, your Library Management System provides various endpoints to perform CRUD operations on books and people, enabling efficient management of the library's collection and reader assignments.
