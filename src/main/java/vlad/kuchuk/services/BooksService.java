@@ -10,6 +10,7 @@ import vlad.kuchuk.models.Person;
 import vlad.kuchuk.repositories.BooksRepository;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -45,6 +46,13 @@ public class BooksService {
 
     public List<Book> findBooksByReader(Person reader) {
         return booksRepository.findByReader(reader);
+    }
+
+    public Book findBookStartingWith(String str) {
+        if(Objects.equals(str, ""))
+            return null;
+        else
+            return booksRepository.findByNameStartingWith(str);
     }
 
     public Person findReader(int id){

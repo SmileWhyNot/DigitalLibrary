@@ -75,6 +75,22 @@ public class BooksController {
         return "redirect:/books";
     }
 
+    @GetMapping("/search")
+    public String searchBookPage() {
+        return "/books/search";
+    }
+
+    @PostMapping("/search")
+    public String searchBook(@RequestParam(value = "searchStr", required = false) String searchStr,
+                               Model model) {
+        model.addAttribute("searchStr", searchStr);
+
+        Book book = booksService.findBookStartingWith(searchStr);
+        model.addAttribute("foundBook", book);
+
+        return "/books/search";
+    }
+
     @GetMapping("/{id}/editBook")
     public String editBook(@PathVariable("id") int id,
                            Model model) {
