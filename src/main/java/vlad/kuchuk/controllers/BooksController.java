@@ -55,6 +55,7 @@ public class BooksController {
             booksService.removeBookReader(id);
         } else if (booksService.findReader(id) == null) {
             booksService.setBookReader(id, person);
+
         }
         return "redirect:/books/{id}";
     }

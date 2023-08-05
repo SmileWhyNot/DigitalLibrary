@@ -9,6 +9,7 @@ import vlad.kuchuk.models.Book;
 import vlad.kuchuk.models.Person;
 import vlad.kuchuk.repositories.BooksRepository;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -45,7 +46,11 @@ public class BooksService {
     }
 
     public List<Book> findBooksByReader(Person reader) {
-        return booksRepository.findByReader(reader);
+        List<Book> books = booksRepository.findByReader(reader);
+        for (Book book : books) {
+            book.countIfOverdue();
+        }
+        return books;
     }
 
     public Book findBookStartingWith(String str) {
@@ -63,13 +68,19 @@ public class BooksService {
     @Transactional
     public void removeBookReader(int id) {
         Optional<Book> book = booksRepository.findById(id);
-        book.ifPresent(value -> value.setReader(null));
+        book.ifPresent(value -> {
+            value.setReader(null);
+            value.setDateOfTaking(null);
+        });
     }
 
     @Transactional
     public void setBookReader(int id, Person person) {
         Optional<Book> book = booksRepository.findById(id);
-        book.ifPresent(value -> value.setReader(person));
+        book.ifPresent(value -> {
+            value.setReader(person);
+            value.setDateOfTaking(new Date());
+        });
     }
 
     @Transactional

@@ -12,14 +12,20 @@
     <hr/>
 </div>
 
-<div th:if="${!books.isEmpty()}">
+<div th:if="${not books.isEmpty()}">
     <hr/>
-    <b >Books:</b> <br/>
-    <table th:each="book : ${books}" th:if="${not books.isEmpty()}" >
-        <tr th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></tr>
+    <b>Books:</b> <br/>
+    <table>
+        <tbody>
+        <tr th:each="book : ${books}"
+            th:style="${book.isOverdue() ? 'color: red;' : 'color: black;'}">
+            <td th:text="${book.getName() + ', ' + book.getAuther() + ', ' + book.getYear()}"></td>
+        </tr>
+        </tbody>
     </table>
     <hr/>
 </div>
+
 
 <form th:method="GET" th:action="@{/people/{id}/editPerson(id=${person.getPersonId()})}">
     <input type="submit" value="Edit person">

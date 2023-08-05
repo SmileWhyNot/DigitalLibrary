@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "book")
 public class Book {
@@ -28,6 +30,13 @@ public class Book {
     @JoinColumn(name = "person_id", referencedColumnName = "person_id")
     private Person reader;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "date_of_taking")
+    private Date dateOfTaking;
+
+    @Transient
+    private Boolean isOverdue;
+
     public Book(int bookId, String name, String auther, int year) {
         this.bookId = bookId;
         this.name = name;
@@ -36,6 +45,18 @@ public class Book {
     }
 
     public Book() {
+    }
+
+    public boolean countIfOverdue () {
+        Date currentTime = new Date();
+        long timeDifferenceInMillis = currentTime.getTime() - dateOfTaking.getTime();
+        if (timeDifferenceInMillis < 864_000_000) {
+            isOverdue = false;
+            return false;
+        } else {
+            isOverdue = true;
+            return true;
+        }
     }
 
     public int getBookId() {
@@ -76,5 +97,17 @@ public class Book {
 
     public void setReader(Person reader) {
         this.reader = reader;
+    }
+
+    public Date getDateOfTaking() {
+        return dateOfTaking;
+    }
+
+    public void setDateOfTaking(Date dateOfTaking) {
+        this.dateOfTaking = dateOfTaking;
+    }
+
+    public Boolean isOverdue() {
+        return isOverdue;
     }
 }
