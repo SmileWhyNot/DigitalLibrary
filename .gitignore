@@ -38,3 +38,4 @@ build/
 /src/main/resources/database.properties
 
 /src/main/resources/hibernate.properties
+/src/main/resources/application.properties
